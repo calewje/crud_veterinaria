@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(13, 72, 150);
+    background-image: url('../img/img21.jpeg');
+     
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+h2{
+    color: rgb(23, 180, 151);
+    font-family: monospace;
+    font-size: 3rem;
+}
+h1{
+    color: aliceblue;
+}
+
+.card{
+    background-color: rgb(164, 231, 250);    
+}
