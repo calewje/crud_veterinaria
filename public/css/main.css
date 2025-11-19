@@ -1,6 +1,6 @@
 body{
     background-color: rgb(13, 72, 150);
-    background-image: url('../img/img21.jpeg');
+    background-image: url('../img/img24.jpg');
      
     background-position: center;
     background-repeat: no-repeat;
@@ -14,9 +14,15 @@ h2{
     font-size: 3rem;
 }
 h1{
-    color: aliceblue;
+    color: rgb(62, 92, 118);
 }
 
 .card{
-    background-color: rgb(164, 231, 250);    
+    background-color: rgba(164, 231, 250, 0.655);    
+}
+
+
+.btn-success{
+    background-color: rgb(27, 177, 127);
+    border:  rgb(27, 177, 127);
 }

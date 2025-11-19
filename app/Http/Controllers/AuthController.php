@@ -15,18 +15,21 @@ class AuthController extends Controller
         return view('modules.login.index', compact('titulo_pagina'));
     }
 
-    public function registro(){
-        $titulo_pagina='Registro de Usuario';
-        return view('modules.login.registro', compact('titulo_pagina'));
+     public function usuarios(){
+        $titulo_pagina='Admin Usuario';
+        $items = User::all();
+        return view('modules.usuarios.index', compact('titulo_pagina', 'items'));
     }
+    
     public function registrar(Request $request){
         $item = new User();
         $item->name = $request->name;
         $item->email = $request->email;
         $item->password = Hash::make($request->password);
+        
         $item->save();
         return to_route('login');
-    }
+    } 
 
     public function logear(Request $request){
         $credenciales =[
@@ -44,7 +47,14 @@ class AuthController extends Controller
     public function logout(){
         Session::flush();
         Auth::logout();
-        return to_route('login');
+        return to_route('Home');
+    }
+
+    public function activo(Request $request, $id){
+        $item = User::find($id);
+        $item->activo = $request->activo;
+        $item->save();
+        return to_route('usuarios');
     }
 
     public function home(){
